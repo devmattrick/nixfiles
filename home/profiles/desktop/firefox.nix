@@ -7,6 +7,7 @@
         fediact
         onepassword-password-manager
         react-devtools
+        return-youtube-dislikes
         sponsorblock
         ublock-origin
       ];
