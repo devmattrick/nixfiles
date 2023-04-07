@@ -38,6 +38,7 @@
         modules = [
           ./nixos/profiles/common
           ./nixos/profiles/desktop
+          ./nixos/profiles/gaming
 
           ./nixos/users/matt
 
@@ -50,16 +51,16 @@
 
     homeConfigurations = {
       "matt@hydrogen" = homeManagerConfiguration {
-        "matt@hydrogen" = {
-          inherit pkgs;
+        inherit pkgs;
 
-          modules = [
-            ./home/profiles/common
-            ./home/profiles/desktop
+        modules = [
+          ./home/profiles/common
+          ./home/profiles/desktop
+          ./home/profiles/gaming
+          ./home/profiles/programming
 
-            ./home/hosts/hydrogen
-          ];
-        };
+          ./home/hosts/hydrogen
+        ];
       };
     };
   };

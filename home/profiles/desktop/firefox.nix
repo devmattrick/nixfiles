@@ -3,15 +3,6 @@
     programs.firefox = {
       enable = true;
 
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        fediact
-        onepassword-password-manager
-        react-devtools
-        return-youtube-dislikes
-        sponsorblock
-        ublock-origin
-      ];
-
       profiles.default = {
         id = 0;
 
@@ -29,6 +20,15 @@
             "Wikipedia (en)".metaData.hidden = true;
           };
         };
+
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          fediact
+          onepassword-password-manager
+          react-devtools
+          return-youtube-dislikes
+          sponsorblock
+          ublock-origin
+        ];
 
         settings = {
           # Disable "first run" page

@@ -4,13 +4,13 @@
   ...
 }: {
   imports = [
-    ./moules/1password.nix
-    ./modules/chromium.nix
-    ./modules/desktopEntries.nix
-    ./modules/discord.nix
-    ./modules/firefox.nix
-    ./modules/git.nix
-    ./modules/gnome.nix
+    ./1password.nix
+    ./chromium.nix
+    ./desktopEntries.nix
+    ./discord.nix
+    ./firefox.nix
+    ./git.nix
+    ./gnome.nix
   ];
 
   config = {
