@@ -1,9 +1,5 @@
 # The common profile configures basic utilities that most hosts will need
-{
-  self,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   config = {
     nix.settings = {
       experimental-features = ["nix-command" "flakes"];
