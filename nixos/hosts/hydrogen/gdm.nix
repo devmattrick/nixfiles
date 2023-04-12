@@ -2,7 +2,7 @@
   # GDM monitor configuration
   systemd.tmpfiles.rules = [
     "L+ /run/gdm/.config/monitors.xml - - - - ${pkgs.writeText "gdm-monitors.xml" ''
-      s<monitors version="2">
+      <monitors version="2">
         <configuration>
           <logicalmonitor>
             <x>2560</x>

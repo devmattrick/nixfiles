@@ -50,5 +50,7 @@
     };
 
     documentation.nixos.enable = false;
+
+    programs.noisetorch.enable = true;
   };
 }
