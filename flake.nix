@@ -10,15 +10,12 @@
     };
 
     nur.url = "github:nix-community/NUR";
-
-    devenv.url = "github:cachix/devenv";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     nur,
-    devenv,
     ...
   }: let
     system = "x86_64-linux";
@@ -68,12 +65,10 @@
       };
     };
 
-    devShell.x86_64-linux = devenv.lib.mkShell {
-      inherit inputs pkgs;
-      modules = [
-        ({pkgs, ...}: {
-          packages = with pkgs; [nil alejandra];
-        })
+    devShell.x86_64-linux = pkgs.mkShell {
+      buildInputs = with pkgs; [
+        nil
+        alejandra
       ];
     };
   };
