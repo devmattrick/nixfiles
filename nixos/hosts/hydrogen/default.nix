@@ -53,6 +53,8 @@
     })
   '';
 
+  # Temp fix for https://github.com/NixOS/nixpkgs/issues/180175
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
